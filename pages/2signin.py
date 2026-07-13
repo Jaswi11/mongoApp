@@ -1,6 +1,6 @@
 import streamlit as st
 import pymongo
-conn=pymongo.MongoClient("mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.9.0")
+conn=pymongo.MongoClient("mongodb+srv://jaswi11:jaswi123@cluster0.9g8j2lr.mongodb.net/?appName=Cluster0")
 mydb=conn["ojt"]
 my=mydb["user_info"]
 st.title("🐍ALL BASIC PYTHON CODE")
