@@ -42,7 +42,6 @@ b1=st.button("🔑SIGN IN ")
 if b1:
     my.insert_one({"username":t1,"password":t2,"mobile":str(t3),"email":t4,"dob":str(t5)});
     server.sendmail("sahujaswi@gmail.com",t4,"HELLO WELCOME TO BASIC PYTHON LEARNING PLATFORM")
-    st.success("🎉Sign Up Successfully")
     st.success(f"Check the notification on email:{t4}") 
     st.success("🎉Sign Up Successfully")
                 
