@@ -38,6 +38,6 @@ if c2.button("See Profile",use_container_width=True):
 if c3.button("Change Password",use_container_width=True):
        cp()
 if c4.button("AI feature",use_container_width=True):
-    pass
+    st.switch_page("pages/AI.py")
 
 
