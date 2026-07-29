@@ -1,5 +1,9 @@
 import streamlit as st
 import pymongo
+import smtplib
+server=smtplib.SMTP("smtp.gmail.com",587)
+server.starttls()
+server.login("sahujaswi@gmail.com","lubwoaufzytnniez")
 conn=pymongo.MongoClient("mongodb+srv://jaswi11:jaswi123@cluster0.9g8j2lr.mongodb.net/?appName=Cluster0")
 mydb=conn["ojt"]
 my=mydb["user_info"]
@@ -37,6 +41,9 @@ t5=st.date_input("DOB")
 b1=st.button("🔑SIGN IN ")
 if b1:
     my.insert_one({"username":t1,"password":t2,"mobile":str(t3),"email":t4,"dob":str(t5)});
+    server.sendmail("sahujaswi@gmail.com",t4,"HELLO WELCOME TO BASIC PYTHON LEARNING PLATFORM")
+    st.success("🎉Sign Up Successfully")
+    st.success(f"Check the notification on email:{t4}") 
     st.success("🎉Sign Up Successfully")
                 
     
